@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Casa Criativa</title>
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="./image/7342creativeHouse (1).ico"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <div id="interface">
+      <div id="container">
+
+        <section id="intro">
+          <header>
+            <div id="logo">
+              <img src="./image/logo.png" alt="Imagem da LogoMarca" />
+            </div>
+            <main>
+            <h2>
+              Ficar em casa em períodos longos, não deve ser nada fácil.
+            </h2>
+            <p>
+              Iremos catalogar ideias,<strong>
+                brincadeiras🤸‍♀🤸‍♂, jogos🎯, filmes📽, livros📖, música🎻, dança💃🕺, cursos online💻,
+                dicas📜 </strong
+              >e tudo que for necessário para tornar esse momento mais interessante.
+            </p>
+            <h4>
+              Comece clicando em ver ideias para ver as ideias cadastradas e
+              contribua adicioando a sua ideia.
+            </h4>
+            </main>
+            <section id="buttons">
+              <button onclick="onOff()" class="one">Adicionar ideias</button>
+              <button class="two">Ver ideias</button>
+            </section>
+    
+            <footer>
+              Com 💜<a href="https://rocketseat.com.br" target="_blank"> RocketSeat</a>
+            </footer>
+
+          </header>
+        </div>
+        </section>
+        <section id="last-ideas">
+          <div class="idea">
+            <img src="https://image.flaticon.com/icons/svg/201/201565.svg" 
+            alt="Curso Online de Programação">
+            <div class="content">
+              <h3>Curso Online de Programação</h3>
+              <p>Estudos Online</p>
+              <div class="description">
+                Na RocketSeat tem a plataforma Started com cursos 100% online e 
+                gratuitos para você entrar com o pé direito nas tecnologias mais
+                desejadas do mercado. Descubra o caminho para 
+                a stack NodeJs, React e React Native.
+              </div>
+              <div class="goToIdea">
+                <a href="#">Ir para a ideia.</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="idea">
+            <img src="https://www.flaticon.com/br/premium-icon/icons/svg/2410/2410407.svg" 
+            alt="Dança">
+            <div class="content">
+              <h3>Seja um dançarino nesta quarentena</h3>
+              <p>Dança de Salão Online</p>
+              <div class="description">
+                A dança traz diversos benefícios para a saúde. Ela pode ser uma 
+                alternativa para movimentar o corpo e afastar o sedentarismo.
+                Dançar aumenta a frequência cardíaca e estimula à circulação 
+                sanguínea, você também trabalha o corpo para ter mais 
+                equilíbrio, coordenação motora, alongamento e postura. 
+                Se você for um dançarino assíduo nesta quarentena e começar a 
+                dançar todos os dias em casa pelo menos 1h, você conseguirá até
+                 perder algumas calorias. Em ligue o som e chame todos em casa 
+                 para dançar com você.
+                </div>
+                <div class="goToIdea">
+                <a href="#">Ir para a ideia.</a>
+                </div>
+              </div>
+          </div>
+
+          <div class="idea">
+            <img src="https://image.flaticon.com/icons/svg/1810/1810085.svg" 
+            alt="Karaoke">
+            <div class="content">
+              <h3>Promova a festa do karaokê na sua casa</h3>
+              <p>karaokê com a família</p>
+              <div class="description">
+                Pode parecer uma brincadeira de crianças, mas os adultos 
+                desfrutam ainda mais que os pequenos. 
+                É por isso, um entretenimento ideal para toda a família.
+                As canções são um meio ideal para o aprendizado das crianças, 
+                já que as ajuda a ampliar o seu vocabulário. As canções 
+                desenvolvem a criatividade e imaginação das crianças.
+                Ajuda as crianças com o aprendizado da leitura, ao ter que 
+                seguir a letra da canção que vai aparecendo na tela.
+              </div>
+              <div class="goToIdea">
+              <a href="#">Ir para a ideia.</a>
+              </div>  
+            </div>
+          </div>
+
+        </section>
+      </div>
+    </div>
+
+<div id="modal" class="hide">
+  <div class="content">
+    <img src="./image/creativeSmallHouse.png" alt="CreativeHouse">
+    <h1>Nova Ideia</h1>
+
+    <form action="">
+
+      <div class="input-wrapper">
+        <label for="title">Título da Ideia</label>
+      <input type="text"name="title" >
+      </div>
+
+      <div class="input-wrapper">
+        <label for="categoria">Categoria</label>
+      <input type="text"name="categoria" >
+      </div>
+
+      <div class="input-wrapper">
+        <label for="image">Link da Imagem</label>
+        <input type="url"name="image" >
+      </div>
+
+      <div class="input-wrapper">
+      <label for="description">Digite uma descrição para essa ideia</label>
+      <textarea name="description" cols="30" rows="10"></textarea>
+      </div>
+
+      <div class="input-wrapper">
+        <label for="link">Link da Ideia</label>
+      <input type="url"name="link" >
+      </div>
+
+
+      <a href="#" onclick="onOff()">Voltar</a>
+      <button>Salvar</button>
+
+    </form>
+  </div>
+</div>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>
