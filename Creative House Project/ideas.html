@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Ideias-Casa Criativa</title>
+    <link rel="stylesheet" href="styles.css" />
+
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="./image/7342creativeHouse (1).ico"
+    />
+  </head>
+  <body id="page-ideas">
+    <div id="interface">
+      <div id="container">
+        <header>
+          <div id="logo">
+            <a href="index.html">
+              <img src="./image/logo.png" alt="Imagem da LogoMarca" />
+            </a>
+          </div>
+          <nav>
+            <div id="buttons">
+              <li><a href="index.html" class="buttonsOne">Home</a></li>
+              <li>
+                <a href="#" class="buttonTwo" onclick="onOff()">Nova Ideia</a>
+              </li>
+            </div>
+          </nav>
+        </header>
+
+        <section id="title">
+          <p>Em Exibição:</p>
+          <h1>IDEIAS</h1>
+        </section>
+
+        <main>
+          <section id="ideas">
+            <div class="idea">
+              <img
+                src="https://image.flaticon.com/icons/svg/201/201565.svg"
+                alt="Curso Online de Programação"
+              />
+              <div class="content">
+                <h3>Curso Online de Programação</h3>
+                <p>Estudos Online</p>
+                <div class="description">
+                  Na RocketSeat tem a plataforma Started com cursos 100% online
+                  e gratuitos para você entrar com o pé direito nas tecnologias
+                  mais desejadas do mercado. Descubra o caminho para a stack
+                  NodeJs, React e React Native.
+                </div>
+                <div class="goToIdea">
+                  <a href="#">Ir para a ideia.</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="idea">
+              <img
+                src="https://www.flaticon.com/br/premium-icon/icons/svg/2410/2410407.svg"
+                alt="Dança"
+              />
+              <div class="content">
+                <h3>Seja um dançarino nesta quarentena</h3>
+                <p>Dança de Salão Online</p>
+                <div class="description">
+                  A dança traz diversos benefícios para a saúde. Ela pode ser
+                  uma alternativa para movimentar o corpo e afastar o
+                  sedentarismo. Dançar aumenta a frequência cardíaca e estimula
+                  à circulação sanguínea, você também trabalha o corpo para ter
+                  mais equilíbrio, coordenação motora, alongamento e postura. Se
+                  você for um dançarino assíduo nesta quarentena e começar a
+                  dançar todos os dias em casa pelo menos 1h, você conseguirá
+                  até perder algumas calorias. Em ligue o som e chame todos em
+                  casa para dançar com você.
+                </div>
+                <div class="goToIdea">
+                  <a href="#">Ir para a ideia.</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="idea">
+              <img
+                src="https://image.flaticon.com/icons/svg/1810/1810085.svg"
+                alt="Karaoke"
+              />
+              <div class="content">
+                <h3>Promova a festa do karaokê na sua casa</h3>
+                <p>karaokê com a família</p>
+                <div class="description">
+                  Pode parecer uma brincadeira de crianças, mas os adultos
+                  desfrutam ainda mais que os pequenos. É por isso, um
+                  entretenimento ideal para toda a família. As canções são um
+                  meio ideal para o aprendizado das crianças, já que as ajuda a
+                  ampliar o seu vocabulário. As canções desenvolvem a
+                  criatividade e imaginação das crianças. Ajuda as crianças com
+                  o aprendizado da leitura, ao ter que seguir a letra da canção
+                  que vai aparecendo na tela.
+                </div>
+                <div class="goToIdea">
+                  <a href="#">Ir para a ideia.</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="idea">
+              <img
+                src="https://as2.ftcdn.net/jpg/02/86/03/53/500_F_286035381_LpuSovF4f2wa6BoLk2wKja9SufVYiZ7t.jpg"
+                alt="French Language"
+              />
+              <div class="content">
+                <h3>Aprenda um novo idioma, que tal aprender Francês?</h3>
+                <p>Curso de Francês Online</p>
+                <div class="description">
+                  Aprender uma nova língua tem muitos benefícios que vão além de
+                  dizer frases e aprender vocabulário, por exemplo: Você passa a
+                  aprender qualquer outra coisa mais rápido, você se torna um
+                  ouvinte melhor, aprimora seu foco, levanta sua autoconfiança,
+                  previne doenças cerebrais, melhora o desempenho em seu próprio
+                  idioma e enriquecimento cultural.
+                </div>
+                <div class="goToIdea">
+                  <a href="#">Ir para a ideia.</a>
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
+        <footer>
+          Com 💜<a href="https://rocketseat.com.br" target="_blank">
+            RocketSeat</a
+          >
+        </footer>
+
+        <div id="modal" class="hide">
+          <div class="content">
+            <img src="./image/creativeSmallHouse.png" alt="CreativeHouse" />
+
+            <h1>Nova Ideia</h1>
+
+            <form action="">
+              <div class="input-wrapper">
+                <label for="title">Título da Ideia</label>
+                <input type="text" name="title" />
+              </div>
+
+              <div class="input-wrapper">
+                <label for="categoria">Categoria</label>
+                <input type="text" name="categoria" />
+              </div>
+
+              <div class="input-wrapper">
+                <label for="image">Link da Imagem</label>
+                <input type="url" name="image" />
+              </div>
+
+              <div class="input-wrapper">
+                <label for="description"
+                  >Digite uma descrição para essa ideia</label
+                >
+                <textarea name="description" cols="30" rows="10"></textarea>
+              </div>
+
+              <div class="input-wrapper">
+                <label for="link">Link da Ideia</label>
+                <input type="url" name="link" />
+              </div>
+
+              <a href="#" onclick="onOff()">Voltar</a>
+              <button>Salvar</button>
+            </form>
+          </div>
+        </div>
+
+        <script src="scripts.js"></script>
+      </div>
+    </div>
+  </body>
+</html>
