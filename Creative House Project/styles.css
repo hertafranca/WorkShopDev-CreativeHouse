@@ -6,6 +6,9 @@ body {
   background-image: url("./image/wall.png");
   background-size: 25%;
 }
+body.hideScroll {
+  overflow: hidden;
+}
 a {
   color: #8c288b;
   text-decoration: none;
@@ -26,12 +29,8 @@ a:hover {
 }
 #intro {
   width: 300px;
-  margin-right: 35px;
+  margin-right: 55px;
 }
-/*main {
-  align-items: left;
-  margin: 10px 15px;
-}*/
 #logo img {
   margin-top: 10px;
   margin-bottom: 40px;
@@ -68,9 +67,6 @@ h4 {
   padding: 20px;
   margin-bottom: 20px;
 }
-#buttons :hover {
-  text-decoration: underline;
-}
 .one {
   color: #ef0f69;
   background-color: #a3d9e8;
@@ -82,17 +78,29 @@ h4 {
   cursor: pointer;
   outline: 0;
 }
-.two {
+.one:hover {
+  text-decoration: underline;
+  color: #a3d9e8;
+  background-color: #ef0f69;
+  box-shadow: 0px 0px 2px 1px #2782ba;
+}
+#buttons a {
   font-size: 15px;
   color: #a3d9e8;
   background-color: #ef0f69;
-  padding: 25px;
+  padding: 15px;
   font-weight: bolder;
   box-shadow: 0px 0px 2px 1px #2782ba;
   border: none;
   border-radius: 0px 60px;
   cursor: pointer;
   outline: 0;
+}
+#buttons a:hover {
+  text-decoration: underline;
+  color: #ef0f69;
+  background-color: #a3d9e8;
+  box-shadow: 0px 0px 2px 1px #ef0f69;
 }
 footer {
   margin: 0 auto;
@@ -133,13 +141,13 @@ footer {
   font-weight: bold;
 }
 .description {
+  text-align: justify;
   font-family: "Acme", sans-serif;
   font-size: 18px;
   -webkit-font-smoothing: antialiased;
   color: rgb(9, 46, 9);
   margin: 10px 0;
 }
-
 .idea .content div.goToIdea {
   display: block;
   text-align: right;
@@ -151,16 +159,19 @@ footer {
 #modal {
   background: #ef0f69;
   position: absolute;
+  height: 350%;
   top: 0;
   left: 0;
-  /*  right: 0;
-  bottom: 0;*/
-  width: 100vw;
-  height: 500vw;
+  right: 0;
   display: flex;
   justify-content: center;
+  transition: 40ms;
+}
+#modal.addScroll {
+  overflow: auto;
 }
 #modal form {
+  margin: 0 auto 5%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
@@ -169,6 +180,8 @@ footer {
   margin: 0 auto;
 }
 #modal .content {
+  padding: 50px 0;
+  margin-top: 5%;
   font-size: 20px;
   line-height: 32px;
   color: yellow;
@@ -209,6 +222,7 @@ form button {
   font-family: "Acme", sans-serif;
   font-size: 15px;
   font-weight: bolder;
+  margin-bottom: 30px;
   width: 150px;
   height: 40px;
   color: bisque;
@@ -232,6 +246,7 @@ form button:hover {
 form a {
   font-family: "Acme", sans-serif;
   color: yellow;
+  margin-bottom: 30px;
   font-size: 15px;
   font-weight: bolder;
   width: 148px;
@@ -256,7 +271,83 @@ form a:hover {
   border: 1px solid #f27d00;
   text-decoration: none;
 }
+
 #modal.hide {
   opacity: 0;
   visibility: hidden;
+}
+
+/* IDEA */
+
+#page-ideas #container {
+  display: block;
+}
+#page-ideas header {
+  display: flex;
+  justify-content: space-between;
+}
+#page-ideas #logo img {
+  margin-bottom: 0px;
+}
+#page-ideas nav {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+#page-ideas nav li {
+  list-style-type: none;
+  margin-right: 30px;
+}
+#page-ideas #buttons li a {
+  padding-right: 12px;
+  padding-left: 10px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  font-weight: bolder;
+  font-size: 18px;
+  border: none;
+  border-radius: 0px 60px;
+  cursor: pointer;
+  outline: 0;
+}
+#buttons li a.buttonsOne {
+  padding: 10px;
+  color: #ef0f69;
+  background-color: #a3d9e8;
+  box-shadow: 0px 0px 2px 1px #ef0f69;
+}
+#buttons li .buttonsOne:hover {
+  color: #a3d9e8;
+  background-color: #ef0f69;
+  text-decoration: underline;
+  box-shadow: 0px 0px 2px 1px #2782ba;
+}
+section#title {
+  text-align: center;
+  margin: 25px auto 50px auto;
+}
+section#title h1 {
+  margin: 0 auto 5px auto;
+  font-size: 38px;
+  font-family: "Berkshire Swash", cursive;
+  color: #ef0f69;
+}
+section#title p {
+  margin: 0;
+  font-size: 20px;
+  font-family: "Satisfy", cursive;
+  color: #2782ba;
+  opacity: 0.8;
+  font-weight: bolder;
+}
+section#ideas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 23px;
+}
+#page-ideas footer {
+  width: 25%;
+  height: 1%;
+  padding: 10px 0px 15px 0px;
+  margin-bottom: 20px;
 }
