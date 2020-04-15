@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Ideias-Casa Criativa</title>
+    <link rel="stylesheet" href="styles.css" />
+
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="./image/7342creativeHouse (1).ico"
+    />
+  </head>
+
+  <body id="page-ideas">
+    <div id="interface">
+      <div id="container">
+        <header>
+          <div id="logo">
+            <a href="/">
+              <img src="./image/logo.png" alt="Imagem da LogoMarca" />
+            </a>
+          </div>
+          <nav>
+            <div id="buttons">
+              <li><a href="/" class="buttonsOne">Home</a></li>
+              <li>
+                <a href="#" class="buttonTwo" onclick="onOff()">Nova Ideia</a>
+              </li>
+            </div>
+          </nav>
+        </header>
+
+        <section id="title">
+          <p>Em Exibição:</p>
+          <h1>IDEIAS</h1>
+        </section>
+
+        <main>
+          <section id="ideas">
+            {% include "allIdeas.html" %}
+          </section>
+        </main>
+        <footer>
+          Com 💜<a href="https://rocketseat.com.br" target="_blank">
+            RocketSeat</a
+          >
+        </footer>
+
+        {% include "modal.html" %}
+
+        <script src="scripts.js"></script>
+      </div>
+    </div>
+  </body>
+</html>
