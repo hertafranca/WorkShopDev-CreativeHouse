@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Casa Criativa</title>
+  <link rel="shortcut icon" type="image/x-icon" href="./image/7342creativeHouse (1).ico" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div id="interface">
+    <div id="container">
+
+      <section id="intro">
+        <header>
+          <div id="logo">
+            <a href="main.html">
+              <img src="./image/logo.png" alt="Imagem da LogoMarca" />
+            </a>
+          </div>
+          <main>
+            <h2>
+              Ficar em casa em períodos longos, não deve ser nada fácil.
+            </h2>
+            <p>
+              Iremos catalogar ideias,<strong>
+                brincadeiras🤸‍♀🤸‍♂, jogos🎯, filmes📽, livros📖, música🎻, dança💃🕺, cursos online💻,
+                dicas📜 </strong>e tudo que for necessário para tornar esse momento mais interessante.
+            </p>
+            <h4>
+              Comece clicando em ver ideias para ver as ideias cadastradas e
+              contribua adicioando a sua ideia.
+            </h4>
+          </main>
+          <section id="buttons">
+            <button onclick="onOff()" class="one">Adicionar ideias</button>
+            <a href="/ideas" class="buttonTwo">Ver ideias</a>
+          </section>
+
+          <footer>
+            Com 💜<a href="https://rocketseat.com.br" target="_blank"> RocketSeat</a>
+          </footer>
+
+        </header>
+    </div>
+    </section>
+    <section id="last-ideas">
+
+      {% include "allIdeas.html" %}
+
+    </section>
+
+  </div>
+  </div>
+
+  {% include "modal.html" %}
+
+  <script src="scripts.js"></script>
+</body>
+
+</html>
