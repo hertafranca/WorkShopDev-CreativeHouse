@@ -21,11 +21,11 @@ db.serialize(function () {
   ) VALUES (?,?,?,?,?);
   `;
   const values = [
-    "https://as2.ftcdn.net/jpg/00/44/17/11/500_F_44171108_7iRPSwptiKB34mSn1j5DiElTTyFAVHFS.jpg",
-    "Leia para seus filhos nesta quarentena.",
-    "Hora da Leitura Online",
-    "Lendo para uma criança você contribui para ela desenvolver atenção, concentração, memória e raciocínio. Dessa forma, toda criança pode desenvolver seu potencial ao máximo. Quando você lê para uma criança, ela pode buscar o futuro que quiser.",
-    "https://www.euleioparaumacrianca.com.br/",
+    "https://image.flaticon.com/icons/svg/201/201565.svg",
+    "Curso Online de Programação",
+    "Estudos Online",
+    "Na RocketSeat tem a plataforma Started com cursos 100% online e gratuitos para você entrar com o pé direito nas tecnologias mais desejadas do mercado. Descubra o caminho para ,a stack NodeJs, React e React Native.",
+    "https://rocketseat.com.br/starter",
   ];
 
   db.run(query, values, function (err) {
