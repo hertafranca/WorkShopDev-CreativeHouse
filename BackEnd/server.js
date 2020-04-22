@@ -52,6 +52,8 @@ const db = require("./db");
 
 server.use(express.static(resolve(__dirname, "..", "FrontEnd")));
 
+server.use(express.urlencoded({ extended: true }));
+
 const nunjucks = require("nunjucks");
 nunjucks.configure(resolve(__dirname, "..", "FrontEnd"), {
   express: server,
@@ -88,6 +90,44 @@ server.get("/ideas", function (req, res) {
     const reversedIdeas = [...rows].reverse();
 
     return res.render("ideas.html", { ideas: reversedIdeas });
+  });
+});
+
+server.post("/", function (req, res) {
+  const query = `
+  INSERT INTO ideas(
+  image,
+  title,
+  category,
+  description,
+  link
+  ) VALUES (?,?,?,?,?)`;
+
+  const values = [
+    req.body.image,
+    req.body.title,
+    req.body.category,
+    req.body.description,
+    req.body.link,
+  ];
+
+  db.run(query, values, function (err) {
+    if (err) {
+      console.log(err);
+      return res.send("Erro no banco de dados!");
+    }
+
+    return res.redirect("/ideas");
+  });
+});
+
+server.get("/ideas/:id", function (req, res) {
+  const { id } = req.params;
+
+  db.run(`DELETE FROM ideas WHERE id = ?`, id, function (err) {
+    if (err) return console.log(err);
+
+    return res.redirect("/");
   });
 });
 
